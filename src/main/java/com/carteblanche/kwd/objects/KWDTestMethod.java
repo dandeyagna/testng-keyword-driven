@@ -10,6 +10,8 @@ package com.carteblanche.kwd.objects;
 
 import java.util.ArrayList;
 
+import com.google.gson.Gson;
+
 public class KWDTestMethod {
 	
 	private String classsName;
@@ -43,6 +45,11 @@ public class KWDTestMethod {
 
 	public void setClasssName(String classsName) {
 		this.classsName = classsName;
+	}
+	
+	public String getParametersJSON() {
+		Gson gson = new Gson();
+		return gson.toJson(parameters);
 	}
 
 }

@@ -1,20 +1,14 @@
 package com.carteblanche.kwd.tests;
 
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-
 public class Login {
 	
-	@Test
-	@Parameters({"userName","password"})
-	public void login(String userName, String password){
+	public void login(String[] params){
 //		fill username "hello"
 //		fill password "wrong"
 //		submit APIRequest expect true
-		System.out.println("Logging in with UserName: "+ userName +"\tPassword: "+password);
+		System.out.println("Logging in with UserName: "+ params[0] +"\tPassword: "+params[1]);
 	}
 	
-	@Test(dependsOnMethods={"login"})
 	public void doSomeThing(){
 		System.out.println("I am doing some thing.. don't disturb me");
 	}
