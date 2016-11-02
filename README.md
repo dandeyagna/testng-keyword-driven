@@ -12,6 +12,8 @@ To compile and execute this you need to have Gradle binary
 
 *cat src/main/resources/tests/loginTestSuite/testLoginWithCorrectPassword.csv*
 
-*login,Correct,Correct*
 
-*doSomeThing*
+|login|correctUserName|correctPassword|
+| ------------- |:-------------:| -----:| ---: |
+|**doSomeThing**| | |
+
