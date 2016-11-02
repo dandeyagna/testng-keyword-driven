@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+     mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
+    compile "org.testng:testng:6.8.7"
+    compile("org.uncommons:reportng:1.1.2") {
+        exclude group: "org.testng", module: "testng"
+    }
+    // https://mvnrepository.com/artifact/commons-lang/commons-lang
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile "com.jcraft:jsch:0.1.44-1"
+}
+
+version = '1.0'
+
+jar {
+     manifest.attributes provider: 'gradle'
+}
+
+task run(type: JavaExec, dependsOn: classes) {
+    main = 'com.carteblanche.kwd.driver.KeywordDrivenDriver'
+    //args = ['build/resources/main/testng.xml'].toList()
+    classpath configurations.runtime
+    classpath sourceSets.main.output
+}
+
