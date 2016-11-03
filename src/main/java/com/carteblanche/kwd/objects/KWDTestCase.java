@@ -29,7 +29,7 @@ public class KWDTestCase {
 	public ArrayList<KWDTestMethod> getTestMethods() {
 		return testMethods;
 	}
-	public void setTestMethodss(ArrayList<KWDTestMethod> testMethods) {
+	public void setTestMethods(ArrayList<KWDTestMethod> testMethods) {
 		this.testMethods = testMethods;
 	}
 

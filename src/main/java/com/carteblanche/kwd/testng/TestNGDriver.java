@@ -86,7 +86,7 @@ public class TestNGDriver implements IReporter {
 			method.invoke(obj, parametersnew);
 		} else {
 			Method method = cls.getDeclaredMethod(methodName);
-			method.invoke(obj,null);
+			method.invoke(obj);
 		}
 	}
 
